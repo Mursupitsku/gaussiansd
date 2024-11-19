@@ -331,15 +331,13 @@ def global_env():
 def setup(mu=MU, sigma=SIGMA, beta=BETA, tau=TAU, score_difference_variance=SD_VARIANCE, env=None):
     """Setups the global environment.
 
-    :param env: the specific :class:`TrueSkill` object to be the global
-                environment.  It is optional.
 
     >>> Rating()
-    trueskill.Rating(mu=25.000, sigma=8.333)
+    gaussiansd.Rating(mu=25.000, sigma=8.333)
     >>> setup(mu=50)  #doctest: +ELLIPSIS
-    trueskill.TrueSkill(mu=50.000, ...)
+    gaussiansd.TrueSkill(mu=50.000, ...)
     >>> Rating()
-    trueskill.Rating(mu=50.000, sigma=8.333)
+    gaussiansd.Rating(mu=50.000, sigma=8.333)
 
     """
     if env is None:
